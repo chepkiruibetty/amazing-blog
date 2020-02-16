@@ -88,13 +88,14 @@ def new_post():
 def post(post_id):
     post = Post.query.get_or_404(post_id)
     form = CommentForm()
+    comments=Comment.query.all()
     if form.validate_on_submit():
         comment = Comment(content=form.content.data)
         db.session.add(comment)
-        #db.session.commit()
+        db.session.commit()
         flash('Your comment has been posted!', 'primary')
         return redirect(url_for('home'))
-    return render_template('blog.html', title=post.title, post=post,form=form)
+    return render_template('blog.html', title=post.title, post=post,form=form,comments=comments)
 
 
 @app.route("/post/<int:post_id>/update", methods=['GET', 'POST'])
@@ -120,9 +121,10 @@ def update_post(post_id):
 @login_required
 def delete_post(post_id):
     post = Post.query.get_or_404(post_id)
-    if post.author != current_user:
-        abort(403)
+    # if post.author != current_user:
+    #     abort(403)
     db.session.delete(post)
     db.session.commit()
     flash('Blog deleted!', 'primary')
     return redirect(url_for('home'))
+
