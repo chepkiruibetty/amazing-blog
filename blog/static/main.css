@@ -1,3 +1,7 @@
+.myshadow:hover{
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+
 body {
     background: #fafafa;
     color: #333333;
@@ -9,7 +13,11 @@ color: #444444;
 }
 
 .bg-steel {
-background-color: #5f788a;
+background-color:#428bca;
+}
+.quotes{
+
+margin-bottom:5px; 
 }
 
 .site-header .navbar-nav .nav-link {
@@ -32,16 +40,16 @@ border-radius: 3px;
 margin-bottom: 20px;
 }
 
-.article-title {
+.card-title {
 color: #444444;
 }
 
-a.article-title:hover {
+a.card-title:hover {
 color: #428bca;
 text-decoration: none;
 }
 
-.article-content {
+.card-content {
 white-space: pre-line;
 }
 
@@ -66,13 +74,6 @@ text-decoration: none;
     width: 25px;
     height: 25px;
     vertical-align: middle;
-}
-
-.account-img {
-    height: 125px;
-    width: 125px;
-    margin-right: 20px;
-    margin-bottom: 16px;
 }
 
 .account-heading {
