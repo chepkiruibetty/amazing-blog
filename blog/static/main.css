@@ -1,26 +1,28 @@
-
-.myshadow:hover{
-    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+.myshadow:hover {
+box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
 }
-.mybody{
+/* .mybody{
 background-color: whitesmoke;
-}
+} */
 body {
-    background: #fafafa;
-    color: #333333;
-    margin-top: 5rem;
+color: #333333;
+margin-top: 5rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 color: #444444;
 }
 
 .bg-steel {
-background-color:#428bca;
+background-color: #428bca;
 }
-.quotes{
-
-margin-bottom:5px; 
+.quotes {
+margin-bottom: 5px;
 }
 
 .site-header .navbar-nav .nav-link {
@@ -34,8 +36,8 @@ color: #ffffff;
 .site-header .navbar-nav .nav-link.active {
 font-weight: 500;
 }
-.myform{
-    padding:20px;
+.myform {
+padding: 20px;
 }
 
 .content-section {
@@ -68,7 +70,7 @@ margin-right: 16px;
 .article-metadata {
 padding-bottom: 1px;
 margin-bottom: 4px;
-border-bottom: 1px solid #e3e3e3
+border-bottom: 1px solid #e3e3e3;
 }
 
 .article-metadata a:hover {
@@ -77,14 +79,14 @@ text-decoration: none;
 }
 
 .article-svg {
-    width: 25px;
-    height: 25px;
-    vertical-align: middle;
+width: 25px;
+height: 25px;
+vertical-align: middle;
 }
 
 .account-heading {
-    font-size: 2.5rem;
+font-size: 2.5rem;
 }
-footer{
-background-color:#428bca;
+footer {
+background-color: #428bca;
 }
