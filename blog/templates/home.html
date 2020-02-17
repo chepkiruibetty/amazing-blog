@@ -1,34 +1,42 @@
 {% extends "design.html" %}
 {% block content %}
-{% for post in posts %}
-<article class="media content-section mr-35">
-    <div class="media-body">
-        <div class="article-metadata">
-            <a class="mr-2" href="">Posted by : {{ post.author.username }}</a>
-            <small class="text-muted">Date Posted : {{ post.date_posted.strftime('%Y-%m-%d')}}</small>
-        </div>
-        <h2><a class="article-title" href="">{{ post.title }}</a></h2>
-        <p class="article-content">{{ post.content }}</p>
-        <button class="btn btn-outline-secondary square btn-small" type="button">
-                <a href="{{url_for('post',post_id=post.id)}}">View Page</a>
-            </button>
-    </div>
-</article>
-{% endfor %}
-<div class="m-5">
-    <blockquote class="quote-box text-center primary-color">
-        <p class="quotation-mark">
-            "
-        </p>
-        <p class="quote-text">
-            {{quote.quote}}
-        </p>
-        <hr />
-        <div class="blog-post-actions">
-            <p class="blog-post-bottom pull-left">
-                {{quote.author}}
+<div class="container quotes">
+        <h1 class="text-center">The Blog Abroad</h1>
+    <div class="m-5">
+        <blockquote class="quote-box text-center primary-color">
+            <p class="quotation-mark">
+                "
             </p>
-        </div>
-    </blockquote>
+            <p class="quote-text">
+                {{quote.quote}}
+            </p>
+            <hr />
+            <div class="blog-post-actions">
+                <p class="blog-post-bottom pull-left">
+                    {{quote.author}}
+                </p>
+            </div>
+        </blockquote>
+    </div>
+<div class="d-flex justify-content-center flex-wrap mb-5">
+{% for post in posts %}
+<div class="col-md-5">
+        <article>
+                <div class="card m-2 p-4 shadow myshadow">
+                    <div class="card-body">
+                        <div class="">
+                            <a class="mr-2" href="">Posted by : {{ post.author.username }}</a>
+                            <small class="text-muted">Date Posted : {{ post.date_posted.strftime('%Y-%m-%d')}}</small>
+                        </div>
+                        <hr>
+                        <h2><a class="card-title" href="">{{ post.title }}</a></h2>
+                        <p class="card-content">{{ post.content }}</p>
+                        <button class="btn btn-outline-secondary square btn-small" type="button">
+                            <a href="{{url_for('post',post_id=post.id)}}">View Page</a>
+                        </button>
+                    </div>
+                </article>
+</div>
+{% endfor %}
 </div>
 {% endblock content %}

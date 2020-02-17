@@ -12,6 +12,7 @@ def home():
     posts = Post.query.all()
     return render_template('home.html', posts=posts, quote=quote)
 
+
 @app.route("/about")
 def about():
     return render_template('about.html', title='About')
