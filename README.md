@@ -75,6 +75,7 @@ chepkiruibetty@gmail.com
 
 ### codebeat
 
+[![codebeat badge](https://codebeat.co/badges/b2a5457a-b154-40d3-ac48-6798a99d016e)](https://codebeat.co/projects/github-com-chepkiruibetty-amazing-blog-master)
 
 
 ## License
