@@ -129,3 +129,14 @@ def delete_post(post_id):
     flash('Blog deleted!', 'primary')
     return redirect(url_for('home'))
 
+@app.route("/post/<int:post_id>/delete", methods=['POST'])
+@login_required
+def delete_comment(comment_id):
+    comment = Comment.query.get_or_404(post_id)
+    # if post.author != current_user:
+    #     abort(403)
+    db.session.delete(comment)
+    db.session.commit()
+    flash('Comment deleted!', 'primary')
+    return redirect(url_for('home'))
+
