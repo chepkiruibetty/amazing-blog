@@ -1,7 +1,10 @@
+
 .myshadow:hover{
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
 }
-
+.mybody{
+background-color: whitesmoke;
+}
 body {
     background: #fafafa;
     color: #333333;
@@ -30,6 +33,9 @@ color: #ffffff;
 
 .site-header .navbar-nav .nav-link.active {
 font-weight: 500;
+}
+.myform{
+    padding:20px;
 }
 
 .content-section {
@@ -78,4 +84,7 @@ text-decoration: none;
 
 .account-heading {
     font-size: 2.5rem;
+}
+footer{
+background-color:#428bca;
 }
